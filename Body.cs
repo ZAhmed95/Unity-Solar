@@ -5,13 +5,20 @@ using System;
 [Serializable]
 public class Body : MonoBehaviour {
 
-	public int clockmax;
-	public Vector3[] positionLog;
-	public Vector3[] accelLog;
-	public Vector3[] velocityLog;
-	public Vector3 initialPosition;
-	public Vector3 initialVelocity;
-	public float mass;
+	public int clockmax; //maximum simulation ticks
+
+	public Vector3[] positionLog; //log of body's position at any timestep
+
+	public Vector3[] accelLog; //log of body's acceleration at any timestep
+
+	public Vector3[] velocityLog; //log of body's velocity at any timestep
+
+	public Vector3 initialPosition; //initial position of body (m)
+
+	public Vector3 initialVelocity; //initial velocity of body (m/s)
+
+	public float mass; //mass of body (kg)
+
 	public float radius; //note: this radius is 3002.27748x the actual radius in AU
 	GravityV2 gravity;
 	Vector3 identity;
